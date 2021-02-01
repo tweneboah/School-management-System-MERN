@@ -1,0 +1,43 @@
+.nav__brand {
+  background-color: $orange !important;
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.sidebar__main {
+  background-color: $darkBlue !important;
+}
+
+.sidebar__minimizer {
+  background-color: transparent !important;
+}
+
+.sidebarIcon {
+  color: $orange !important;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.nav__search {
+  display: flex;
+  opacity: 0.5;
+  align-items: center;
+  margin-left: 20%;
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  input {
+    border: none;
+    font-size: 1.5em;
+  }
+}
+
+.form-error {
+  display: block !important;
+}
