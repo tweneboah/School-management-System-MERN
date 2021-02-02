@@ -4,175 +4,77 @@ import CIcon from '@coreui/icons-react'
 const _nav =  [
   {
     _tag: 'CSidebarNavDropdown',
-    name: 'Dashboard',
+    name: 'Teacher Dashboard',
     route: '/admin',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon sidebarIcon"/>,
     _children: [
         {
             _tag: 'CSidebarNavItem',
-            name: 'Admin',
+            name: 'My Profile',
             to: '/base/breadcrumbs',
           },
           {
             _tag: 'CSidebarNavItem',
-            name: 'Students',
+            name: 'Edit Profile',
             to: '/base/cards',
           },
           {
             _tag: 'CSidebarNavItem',
-            name: 'Parents',
+            name: 'Salary',
             to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Teachers',
-            to: '/base/cards',
-          },
-    ]
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Students',
-    route: '/admin/students',
-    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
-    ]
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Staff',
-    route: '/admin/teachers',
-    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
-    ]
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Parents',
-    route: '/admin/teachers',
-    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
-    ]
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Attendance',
-    route: '/admin/teachers',
-    icon: 'cil-pencil',
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/admin/teachers',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
+          }
     ]
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Academics',
-    route: '/admin/academics',
-    icon: 'cil-puzzle',
+    route: '/academics',
+    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
     _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Cards',
-        to: '/base/cards',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Carousel',
-        to: '/base/carousels',
-      },
-     
-    
-    ],
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Finance',
-    route: '/admin/Finance',
-    icon: 'cil-cursor',
-    _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Buttons',
-        to: '/buttons/buttons',
-      }
-    ],
-  },
-
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Notifications',
-    route: '/notifications',
-    icon: 'cil-bell',
-    _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Modal',
-        to: '/notifications/modals',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Toaster',
-        to: '/notifications/toaster'
-      }
+        {
+            _tag: 'CSidebarNavItem',
+            name: 'All Classes',
+            to: '/classes/all',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Classes',
+            to: '/classes/details',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'All Courses',
+            to: '/courses/all',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Course Details',
+            to: '/courses/details',
+          },
     ]
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Message',
-    to: '/widgets',
+    name: 'Attendences',
+    to: '/attendances',
+    icon: 'cil-calculator',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Messages',
+    to: '/messages',
+    icon: 'cil-calculator',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Notifications',
+    to: '/notifications',
+    icon: 'cil-calculator',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Account Settings',
+    to: '/settings',
     icon: 'cil-calculator',
   },
   

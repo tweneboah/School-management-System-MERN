@@ -3,7 +3,7 @@ import React from 'react';
 
 const Dashboard = React.lazy(()  => import( '../../AdminComponents/dashboard/Index'));
 const Students = React.lazy(()  => import( '../../AdminComponents/students/Index'));
-const Teachers = React.lazy(()  => import( '../../AdminComponents/teachers/Index'));
+const Teachers = React.lazy(()  => import( '../../AdminComponents/staff/Index'));
 const Finances = React.lazy(()  => import( '../../AdminComponents/finance/Index'));
 const Messages = React.lazy(()  => import( '../../AdminComponents/messages/Index'));
 const Academics = React.lazy(()  => import( '../../AdminComponents/academics/Index'));

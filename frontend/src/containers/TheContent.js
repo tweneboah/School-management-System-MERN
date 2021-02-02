@@ -15,12 +15,12 @@ const loading = (
   </div>
 )
 
-const TheContent = ({routes}) => {
+const TheContent = ({routes, path}) => {
   return (
     <main className="c-main">
       <CContainer fluid>
         <Suspense fallback={loading}>
-          <Switch>
+        <Switch>
             {routes.map((route, idx) => {
               return route.component && (
                 <Route
@@ -32,10 +32,11 @@ const TheContent = ({routes}) => {
                     <CFade>
                       <route.component {...props} />
                     </CFade>
-                  )} />
+                  )}
+                   />
               )
             })}
-            <Redirect from="/" to="/" />
+            {/* <Redirect from="/" to={`/${path}`} /> */}
           </Switch>
         </Suspense>
       </CContainer>

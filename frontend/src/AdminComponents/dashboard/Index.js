@@ -1,33 +1,11 @@
-import React, {Suspense} from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom';
-import { CContainer } from '@coreui/react';
-
+import React from 'react'
 
 function Index() {
-  const loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
-    return (
-       
-             <CContainer fluid>
-              <Suspense fallback={loading()}>
-                {/* <Switch>
-                  {routes.map((route, idx) => {
-                    return route.component ? (
-                      <Route
-                        key={idx}
-                        path={route.path}
-                        exact={route.exact}
-                        name={route.name}
-                        render={props => (
-                          <route.component {...props} />
-                        )} />
-                    ) : (null);
-                  })}
-                  <Redirect from="/" to="/dashboard" />
-                </Switch> */}
-                <h1>Dashboard trying</h1>
-              </Suspense>
-            </CContainer>
-    )
+  return (
+    <div>
+      Admin Dashboard
+    </div>
+  )
 }
 
 export default Index

@@ -20,7 +20,9 @@ if(localStorage.getItem(LoginString.ID)){
     photoUrl: localStorage.getItem(LoginString.PhotoURL),
     email: localStorage.getItem(LoginString.EMAIL),
     name: localStorage.getItem(LoginString.NAME),
-    account: localStorage.getItem(LoginString.USERROLE)
+    role: localStorage.getItem(LoginString.USERROLE),
+    lastName: localStorage.getItem(LoginString.LASTNAME),
+    middleName: localStorage.getItem(LoginString.middleName)
   }))
  }
  else{

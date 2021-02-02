@@ -65,7 +65,7 @@ route.post('/create', async(req , res) => {
       let userID = 'TK' + currentYear + (number + 1)
       console.log(number)
   
-      bcrypt.hash(teacherId, 10, (err, hash) => {
+      bcrypt.hash(userID, 10, (err, hash) => {
             if(err){
                 console.log(err, "err")
               return   res.json({success: false, error: "something went wrong"})

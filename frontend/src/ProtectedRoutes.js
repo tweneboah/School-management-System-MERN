@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route , Redirect} from 'react-router-dom'
 
-export const SignedInRoutes = ({component:Component, path,  isAuth, exact, name}) => {
+export const SignedInRoutes = ({Component, path,  isAuth, exact, name}) => {
     if(!isAuth) {
         return <Redirect to="/login"/>
     }
@@ -14,7 +14,7 @@ export const SignedInRoutes = ({component:Component, path,  isAuth, exact, name}
 
 export const SignedOutRoutes = ({component, path,  isAuth, exact}) => {
     if(isAuth) {
-        return <Redirect to="/"/>
+        return <Redirect to={`/${isAuth?.role}`}/>
     }
     return <Route path={path} component={component} exact={exact}/>
 }

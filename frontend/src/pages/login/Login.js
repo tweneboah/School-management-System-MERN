@@ -41,13 +41,17 @@ const Login = ({history}) => {
               name: user.name,
               email: user.email,
               photoUrl: user.photoUrl,
-              role: user.role
+              role: user.role,
+              lastName: user.surname,
+              middleName: user.middleName
             }))
             localStorage.setItem(LoginString.ID, user.userID)
             localStorage.setItem(LoginString.PhotoURL, user.photoUrl)
             localStorage.setItem(LoginString.NAME, user.name) 
             localStorage.setItem(LoginString.EMAIL, user.email)
-            localStorage.setItem(LoginString.USERROLE, user.role)
+            localStorage.setItem(LoginString.USERROLE, user.role);
+            localStorage.setItem(LoginString.LASTNAME, user.surname);
+            localStorage.setItem(LoginString.MIDNAME, user.middleName)
             history.push('/')
          }
          else{

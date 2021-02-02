@@ -4,5 +4,7 @@ export const LoginString = {
     NAME : "name",
     EMAIL: "email",
     TOKEN: 'token',
-    USERROLE: 'type'
+    USERROLE: 'role',
+    MIDNAME: "middleName",
+    LASTNAME: "lastname"
 }

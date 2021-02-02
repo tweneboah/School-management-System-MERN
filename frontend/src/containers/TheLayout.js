@@ -12,6 +12,7 @@ const TheLayout = () => {
 
   return (
     <div className="c-app c-default-layout">
+      
       <TheSidebar navs={navigation}/>
       <div className="c-wrapper">
         <TheHeader/>
@@ -19,6 +20,7 @@ const TheLayout = () => {
           <TheContent routes={routes}/>
         </div>
         <TheFooter/>
+        <h1>hey</h1>
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ const TheHeaderDropdownMssg = () => {
   return (
     <CDropdown
       inNav
-      className="c-header-nav-item mx-2"
+      className="c-header-nav-item mx-1"
       direction="down"
     >
       <CDropdownToggle className="c-header-nav-link" caret={false}>

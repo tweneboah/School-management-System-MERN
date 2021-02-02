@@ -41,3 +41,38 @@ input:focus {
 .form-error {
   display: block !important;
 }
+
+.user__avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    font-size: smaller;
+  }
+}
+
+.content__container {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.orange__btn {
+  background-color: $orange !important;
+  color: $white !important;
+  padding: 10px 30px !important;
+  &:hover {
+    background-color: $darkBlue !important;
+  }
+}
+
+.blue__btn {
+  background-color: $darkBlue !important;
+  color: $white !important;
+  padding: 10px 30px !important;
+  &:hover {
+    background-color: $orange !important;
+  }
+}

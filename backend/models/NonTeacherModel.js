@@ -3,7 +3,6 @@ import  mongoose from "../config/mongodb.js"
 const { Schema } = mongoose;
 
 const NonTeacherSchema =   new Schema( {
-    _id: String,
     name: {
         type: String,
         required: true

@@ -3,176 +3,191 @@ import CIcon from '@coreui/icons-react'
 
 const _nav =  [
   {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Dashboard',
-    route: '/admin',
+    _tag: 'CSidebarNavItem',
+    name: 'Admin Dashboard',
+    to: '/',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon sidebarIcon"/>,
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Admin',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Students',
-            to: '/base/cards',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Parents',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Teachers',
-            to: '/base/cards',
-          },
-    ]
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Students',
-    route: '/admin/students',
+    route: '/students',
     icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
     _children: [
         {
             _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
+            name: 'All Students',
+            to: '/students',
           },
           {
             _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
+            name: 'Registration New',
+            to: '/students/new',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Attendance',
+            to: '/students/attendence',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Campuses',
+            to: '/students/campus',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Dormitories',
+            to: '/students/dormitories',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'UpGrading',
+            to: '/students/upgrade',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Prefects',
+            to: '/students/prefects',
+          },
+          {
+            _tag: 'CSidebarNavItem',
+            name: 'Scholarships',
+            to: '/students/scholarships',
           },
     ]
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Staff',
-    route: '/admin/teachers',
+    route: '/staff',
     icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
     _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'All Staff',
+        to: '/staff',
+      },
+      {
+          _tag: 'CSidebarNavItem',
+          name: 'Add Staff',
+          to: '/staff/new',
+        },
         {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
+          _tag: 'CSidebarNavItem',
+          name: 'Attendance',
+          to: '/staff/attendence',
+        },
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Payrow',
+          to: '/staff/payrow',
+        }
     ]
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Parents',
-    route: '/admin/teachers',
+    route: '/parents',
     icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon  sidebarIcon"/>,
     _children: [
-        {
+          {
             _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/base/breadcrumbs',
+            name: 'All Parents',
+            to: '/parents',
           },
           {
             _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
-          },
-    ]
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Attendance',
-    route: '/admin/teachers',
-    icon: 'cil-pencil',
-    _children: [
-        {
-            _tag: 'CSidebarNavItem',
-            name: 'Breadcrumb',
-            to: '/admin/teachers',
-          },
-          {
-            _tag: 'CSidebarNavItem',
-            name: 'Cards',
-            to: '/base/cards',
+            name: 'Add New',
+            to: '/parents/new',
           },
     ]
   },
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Academics',
-    route: '/admin/academics',
+    route: '/academics',
     icon: 'cil-puzzle',
     _children: [
       {
         _tag: 'CSidebarNavItem',
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
+        name: 'Classes',
+        to: '/academics/classes',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Cards',
-        to: '/base/cards',
+        name: 'Courses',
+        to: '/academics/courses',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Carousel',
-        to: '/base/carousels',
+        name: 'School Calender',
+        to: '/academics/calender',
       },
-     
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Exams',
+        to: '/academics/exams',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Timetable',
+        to: '/academics/timetable',
+      },
     
-    ],
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Finance',
-    route: '/admin/Finance',
-    icon: 'cil-cursor',
-    _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Buttons',
-        to: '/buttons/buttons',
-      }
     ],
   },
 
   {
     _tag: 'CSidebarNavDropdown',
-    name: 'Notifications',
-    route: '/notifications',
-    icon: 'cil-bell',
+    name: 'Finance',
+    route: '/finance',
+    icon: 'cil-cursor',
     _children: [
       {
         _tag: 'CSidebarNavItem',
-        name: 'Alerts',
-        to: '/notifications/alerts',
+        name: 'Set Fees',
+        to: '/finance/set',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Badges',
-        to: '/notifications/badges',
+        name: 'Prepare bill',
+        to: '/finance/preparebill',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Modal',
-        to: '/notifications/modals',
+        name: 'Bill Payment',
+        to: '/finance/billpayment',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Toaster',
-        to: '/notifications/toaster'
+        name: 'Transactions',
+        to: '/finance/viewpayment',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Banking',
+        to: '/finance/banking',
+
       }
-    ]
+    ],
   },
+
   {
     _tag: 'CSidebarNavItem',
     name: 'Message',
-    to: '/widgets',
+    to: '/messages',
+    icon: 'cil-calculator',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Notifications',
+    to: '/notifications',
+    icon: 'cil-calculator',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Account Settings',
+    to: '/settings',
     icon: 'cil-calculator',
   },
   

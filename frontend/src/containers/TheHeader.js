@@ -1,13 +1,13 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import {set} from '../store/slices/appSlice'
 import {
   CHeader,
   CToggler,
   CHeaderBrand,
   CHeaderNav,
   CSubheader,
-  CBreadcrumbRouter,
-  CLink
+  CBreadcrumbRouter
 } from '@coreui/react'
 import SearchIcon from '@material-ui/icons/Search';
 import CIcon from '@coreui/icons-react'
@@ -18,8 +18,7 @@ import routes from '../routes'
 import { 
   TheHeaderDropdown,
   TheHeaderDropdownMssg,
-  TheHeaderDropdownNotif,
-  TheHeaderDropdownTasks
+  TheHeaderDropdownNotif
 }  from './index'
 
 const TheHeader = () => {
@@ -27,13 +26,15 @@ const TheHeader = () => {
   const sidebarShow = useSelector(state => state.sidebarShow)
 
   const toggleSidebar = () => {
+    console.log("clicked")
     const val = [true, 'responsive'].includes(sidebarShow) ? false : 'responsive'
-    dispatch({type: 'set', sidebarShow: val})
+    dispatch(set(val))
   }
 
   const toggleSidebarMobile = () => {
+    console.log("clicked")
     const val = [false, 'responsive'].includes(sidebarShow) ? true : 'responsive'
-    dispatch({type: 'set', sidebarShow: val})
+    dispatch(set(val))
   }
 
   return (
@@ -59,7 +60,7 @@ const TheHeader = () => {
           </form>
       </CHeaderNav>
 
-      <CHeaderNav className="px-3">
+      <CHeaderNav className="px-3 nav__icons">
         <TheHeaderDropdownNotif/>
         <TheHeaderDropdownMssg/>
         <TheHeaderDropdown/>
@@ -70,21 +71,6 @@ const TheHeader = () => {
           className="border-0 c-subheader-nav m-0 px-0 px-md-3" 
           routes={routes} 
         />
-          {/* <div className="d-md-down-none mfe-2 c-subheader-nav">
-            <CLink className="c-subheader-nav-link"href="#">
-              <CIcon name="cil-speech" alt="Settings" />
-            </CLink>
-            <CLink 
-              className="c-subheader-nav-link" 
-              aria-current="page" 
-              to="/dashboard"
-            >
-              <CIcon name="cil-graph" alt="Dashboard" />&nbsp;Dashboard
-            </CLink>
-            <CLink className="c-subheader-nav-link" href="#">
-              <CIcon name="cil-settings" alt="Settings" />&nbsp;Settings
-            </CLink>
-          </div> */}
       </CSubheader>
     </CHeader>
   )

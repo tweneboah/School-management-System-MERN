@@ -1,22 +1,19 @@
 import React from 'react'
 import {
-  TheContent,
-  TheSidebar,
   TheFooter,
   TheHeader
-} from '../../containers/index'
-import routes from './adminRoutes';
-import navs from './sidebarNavs'
+} from '../index'
+import TheSidebar from './Sldebar';
+import TheContent from './Content'
 
 const TheLayout = () => {
-
   return (
     <div className="c-app c-default-layout">
-      <TheSidebar navs={navs}/>
+      <TheSidebar/>
       <div className="c-wrapper">
         <TheHeader/>
         <div className="c-body">
-          <TheContent routes={routes}/>
+          <TheContent/>
         </div>
         <TheFooter/>
       </div>

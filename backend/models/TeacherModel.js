@@ -3,7 +3,6 @@ import  mongoose from "../config/mongodb.js"
 const { Schema } = mongoose;
 
 const TeacherSchema =   new Schema( {
-    _id: String,
     userID: String,
     name: {
         type: String,
@@ -37,7 +36,7 @@ const TeacherSchema =   new Schema( {
     },
     role: {
         type: String,
-        default: "Teacher"
+        default: "teacher"
     },
     qualifiations: {
         type: String

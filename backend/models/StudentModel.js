@@ -30,7 +30,9 @@ const StudentSchema =   new Schema( {
     email: {
         type: String
     },
-    middleName: String,
+    middleName: {
+        type: String
+    },
     physicalAddress: {
         type: String
      },

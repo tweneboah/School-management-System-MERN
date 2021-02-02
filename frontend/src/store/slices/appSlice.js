@@ -7,6 +7,7 @@ export const appSlice = createSlice({
   },
   reducers: {
     set: (state, action )=> {
+        console.log(action.payload)
           state.sidebarShow = action.payload
     }
   },

@@ -1,53 +1,84 @@
 
 import React from 'react';
 
-const Dashboard = React.lazy(()  => import( '../../AdminComponents/dashboard/Index'));
-const Students = React.lazy(()  => import( '../../AdminComponents/students/Index'));
-const Teachers = React.lazy(()  => import( '../../AdminComponents/teachers/Index'));
-const Finances = React.lazy(()  => import( '../../AdminComponents/finance/Index'));
-const Messages = React.lazy(()  => import( '../../AdminComponents/messages/Index'));
-const Academics = React.lazy(()  => import( '../../AdminComponents/academics/Index'));
+const Dashboard = React.lazy(()  => import( '../../StudentComponents/dashboard/Index'));
+const Profile =   React.lazy(()  => import( '../../StudentComponents/profile/ProfilePage'));
+const EditProfile =   React.lazy(()  => import( '../../StudentComponents/profile/EditProfilePage'));
+const Fees =   React.lazy(()  => import( '../../StudentComponents/finances/FeesPage'));
+const Class =   React.lazy(()  => import( '../../StudentComponents/classes/Classes'));
+const Courses =   React.lazy(()  => import( '../../StudentComponents/classes/CoursesPage'));
+const Exams =   React.lazy(()  => import( '../../StudentComponents/classes/ExamsPage'));
+const Timetable =   React.lazy(()  => import( '../../StudentComponents/classes/TimeTablePage'));
+const Attendance =   React.lazy(()  => import( '../../StudentComponents/attendence/AttendancePage'));
+const Messages =   React.lazy(()  => import( '../../StudentComponents/messages/Messages'));
+const Notifications =   React.lazy(()  => import( '../../StudentComponents/notifications/NotificationsPage'));
+const Settings =   React.lazy(()  => import( '../../StudentComponents/settings/SettingsPage'));
+
 
 
 
  const routes =  [
     {
-        path: "/admin",
+        path: "/",
         name: "Dashboard",
         exact: true,
         component: Dashboard,
-        layout: "/admin",
     },
     {
-        path: "/admin/students",
-        name: "Students",
-        route: '/students',
-        component: Students,
+        path: "/profile",
+        name: "Profile",
+        exact: true,
+        component: Profile,
     },
     {
-        path: "/admin/teachers",
-        name: "Staff",
-        component: Teachers,
-        layout: "/admin"
-        
+        path: "/editProfile",
+        name: "Edit Profile",
+        component: EditProfile,   
     },
     {
-        path: "/admin/academics",
-        name: "Academics",
-        component: Academics,
-        layout: "/admin"
+        path: "/class",
+        name: "Class",
+        component: Class
     },
     {
-        path: "/admin/Finance",
-        name: "Finance",
-        component: Finances,
-        layout: "/admin"
+        path: "/course",
+        name: "Courses",
+        component: Courses
     },
     {
-        path: "/admin/messages",
+        path: "/exams",
+        name: "Exams",
+        component: Exams
+    },
+    {
+        path: "/timetable",
+        name: "Timetable",
+        component: Timetable
+    },
+    {
+        path: "/fees",
+        name: "Fees",
+        component: Fees
+    },
+    {
+        path: "/attendance",
+        name: "Attendance",
+        component: Attendance
+    },
+    {
+        path: "/notifications",
+        name: "Notifications",
+        component: Notifications
+    },
+    {
+        path: "/settings",
+        name: "Settings",
+        component: Settings
+    },
+    {
+        path: "/message",
         name: "Messages",
         component: Messages,
-        layout: "/admin"
     },
 ]
 
